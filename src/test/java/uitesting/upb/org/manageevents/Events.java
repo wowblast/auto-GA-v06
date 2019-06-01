@@ -14,4 +14,8 @@ public class Events {
     public static void click(By by){
         DriverManager.getInstance().getWebDriver().findElement(by).click();
     }
+
+    public static void fillField(WebElement searchTextField, String text) {
+        searchTextField.sendKeys(text);
+    }
 }
