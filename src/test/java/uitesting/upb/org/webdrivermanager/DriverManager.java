@@ -1,6 +1,7 @@
 package uitesting.upb.org.webdrivermanager;
 
 import org.openqa.selenium.WebDriver;
+import uitesting.upb.org.managefile.PropertyAccesor;
 
 /**
  * @autor Marcelo Garay
@@ -14,7 +15,7 @@ public class DriverManager {
     }
 
     private DriverManager() {
-        webDriver = DriverFactory.getWebDriver(BrowserType.CHROME);
+        webDriver = DriverFactory.getWebDriver(BrowserType.valueOf(PropertyAccesor.getInstance().getBrowser()));
     }
 
     public WebDriver getWebDriver(){
