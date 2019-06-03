@@ -14,6 +14,6 @@ public class LoadPage {
     }
 
     public static void main(String[] args) {
-        loadGoogleHome();
+        loadGoogleHome().searchTextAndClickSearchButton("UPB cochabamba");
     }
 }
