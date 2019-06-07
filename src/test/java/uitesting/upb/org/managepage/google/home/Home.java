@@ -11,7 +11,7 @@ import uitesting.upb.org.managepage.BasePage;
  */
 public class Home extends BasePage {
 
-    @FindBy(xpath = "")
+    @FindBy(id = "")
     private WebElement searchTextField;
 
     @FindBy(css = "")
