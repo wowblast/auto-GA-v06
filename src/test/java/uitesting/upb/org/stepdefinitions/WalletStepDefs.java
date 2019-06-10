@@ -14,13 +14,13 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class WalletStepDefs {
-    @Given("^pagina_creador_decuentas$")
+    @Given("^pagina_creador_decuentas-crear-cuenta $")
     public void pagina_creador_decuentas() {
         loadMaimPage().createAccountAndEnter("testaccount");
     }
 
 
-    @Then("^crear-income$")
+    @Then("^click-crear-income$")
     public void crearIncome() {
         DriverManager.getInstance().getWebDriver().manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         new AccountOptionsPage().enterIncomes();
@@ -40,5 +40,11 @@ public class WalletStepDefs {
             e.printStackTrace();
         }
         new IncomePage().fillAndAddIncome("income1","Salary",1000,date);
+    }
+
+    @Given("^pagina_creador_decuentas-crear-cuenta$")
+    public void pagina_creador_decuentasCrearCuenta() {
+        loadMaimPage().createAccountAndEnter("testaccount");
+
     }
 }
